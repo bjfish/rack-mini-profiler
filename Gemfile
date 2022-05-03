@@ -7,11 +7,12 @@ gemspec
 
 group :test do
   gem 'codecov', require: false
-  gem 'stackprof', require: false
+  gem 'stackprof', require: false, platforms: [:mri]
 end
 
 group :development do
   gem 'guard', platforms: [:mri_22, :mri_23]
   gem 'guard-rspec', platforms: [:mri_22, :mri_23]
+  gem 'mini_racer', github: 'bjfish/mini_racer', branch: 'truffleruby', platforms: [:truffleruby]
   gem 'rubocop', '>=0.77.0', require: false
 end

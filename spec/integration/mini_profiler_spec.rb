@@ -171,7 +171,7 @@ describe Rack::MiniProfiler do
 
     Process.wait(pid)
     expect($?.exitstatus).to eq(0)
-  end
+  end unless RUBY_ENGINE == "truffleruby"
 
   describe 'with an implicit body tag' do
 

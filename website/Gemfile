@@ -7,4 +7,4 @@ gem 'rack-mini-profiler', path: '../'
 gem 'puma'
 gem 'listen'
 gem 'byebug'
-gem 'stackprof'
+gem 'stackprof', platforms: [:mri]

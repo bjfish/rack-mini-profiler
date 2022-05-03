@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'stackprof'
+require 'stackprof' if RUBY_ENGINE == "ruby"
 require 'rack-mini-profiler'
 require 'sinatra'
 require 'sinatra/base'
